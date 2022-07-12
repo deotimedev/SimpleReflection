@@ -8,7 +8,7 @@ public class SimpleReflect {
     public static <T> Reflectable<T> upon(T obj) {
         return new Reflectable<>(obj);
     }
-    
+
     public static <T> T construct(Class<T> clazz, Object... params) {
         try {
             Constructor<T> constructor = clazz.getDeclaredConstructor(mapParams(params));
